@@ -152,14 +152,14 @@
         <section id="generator" class="py-24 px-6 relative bg-slate-950/20">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16 px-4">
-                    <h2 class="text-3xl md:text-5xl font-black text-white mb-6 uppercase tracking-tighter font-heading">Digital Identity Hub</h2>
+                    <h2 class="text-3xl md:text-5xl font-black text-white mb-6 uppercase tracking-tighter font-heading">Identity Hub</h2>
                     <p class="text-slate-400 font-medium max-w-2xl mx-auto">Select a specialized module to generate your authenticated QR credential certificate.</p>
                 </div>
 
                 <div class="flex overflow-x-auto custom-scrollbar gap-2 mb-12 pb-6 justify-start md:justify-center px-4">
                     <button onclick="switchTab('signature')" id="tab-signature" class="tab-btn active-tab whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 transition-all">Signature</button>
-                    <button onclick="switchTab('vcard')" id="tab-vcard" class="tab-btn whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 hover:text-white transition-all">vCard Profil</button>
-                    <button onclick="switchTab('url')" id="tab-url" class="tab-btn whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 hover:text-white transition-all">Link URL</button>
+                    <button onclick="switchTab('vcard')" id="tab-vcard" class="tab-btn whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 hover:text-white transition-all">vCard Profile</button>
+                    <button onclick="switchTab('url')" id="tab-url" class="tab-btn whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 hover:text-white transition-all">Web Link</button>
                     <button onclick="switchTab('maps')" id="tab-maps" class="tab-btn whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 hover:text-white transition-all">Location</button>
                     <button onclick="switchTab('wa')" id="tab-wa" class="tab-btn whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 hover:text-white transition-all">WhatsApp</button>
                     <button onclick="switchTab('file')" id="tab-file" class="tab-btn whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 hover:text-white transition-all">Cloud File</button>
@@ -189,8 +189,8 @@
                                 </div>
                             </div>
                             <div class="bg-white/5 p-6 border-2 border-dashed border-white/10 standard-rounded text-center">
-                                <label class="block text-[10px] font-bold text-amber-500 mb-4 uppercase tracking-widest">Digital Signature Specimen</label>
-                                <input type="file" id="sig-img-upload" accept="image/*" class="w-full text-[10px] font-bold text-slate-500 cursor-pointer file:bg-amber-500 file:border-0 file:px-4 file:py-1.5 file:text-slate-950 file:rounded-md file:mr-4 file:font-black file:uppercase">
+                                <label class="block text-[10px] font-bold text-amber-500 mb-4 uppercase tracking-widest text-center">Digital Signature Specimen</label>
+                                <input type="file" id="sig-img-upload" accept="image/*" class="w-full text-[10px] font-bold text-slate-500 cursor-pointer file:bg-amber-500 file:border-0 file:px-4 file:py-2 file:text-slate-950 file:rounded-md file:mr-4 file:font-black file:uppercase">
                             </div>
                             <button onclick="generateSignatureQR()" class="w-full btn-premium text-slate-950 font-black py-5 shadow-2xl uppercase tracking-widest text-xs standard-rounded">
                                 Generate Authenticated QR
@@ -232,7 +232,7 @@
                         <!-- Brand Logo Option -->
                         <div class="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center gap-8">
                             <div class="flex-1 text-center md:text-left">
-                                <h5 class="text-xs font-black text-white uppercase tracking-widest mb-1 font-heading text-left">Corporate Branding</h5>
+                                <h5 class="text-xs font-black text-white uppercase tracking-widest mb-1 font-heading text-left text-nowrap">Corporate Branding</h5>
                                 <p class="text-[10px] text-slate-500 font-medium leading-relaxed text-left">Optional: Embed institutional logo to the center of the QR module.</p>
                             </div>
                             <input type="file" id="logo-upload" accept="image/*" class="w-full md:w-auto text-[9px] font-bold text-slate-400">
@@ -246,7 +246,7 @@
                                 <div class="w-24 h-24 border-4 border-amber-500 flex items-center justify-center mx-auto standard-rounded shadow-[0_0_20px_rgba(251,191,36,0.3)]">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><rect x="2" y="2" width="20" height="20" rx="0"/><rect x="5" y="5" width="5" height="5"/><rect x="14" y="5" width="5" height="5"/><rect x="5" y="14" width="5" height="5"/></svg>
                                 </div>
-                                <p class="font-black uppercase tracking-[0.5em] text-[10px] text-white">System Standby</p>
+                                <p class="font-black uppercase tracking-[0.5em] text-[10px] text-white">System Ready</p>
                             </div>
 
                             <div id="preview-result" class="hidden w-full space-y-10 animate-in zoom-in-95 duration-500">
@@ -278,81 +278,92 @@
                     </p>
                 </div>
                 <div class="text-center md:text-right">
-                    <p class="text-[10px] text-slate-600 font-bold uppercase tracking-[0.3em] mb-4">Certified Encryption System</p>
                     <p class="text-slate-400 text-sm font-extrabold uppercase tracking-widest font-heading">© 2026 DEWAQR — Copyright by Dewa</p>
                 </div>
             </div>
         </footer>
     </div>
 
-    <!-- VERIFICATION PAGE (CERTIFICATE STYLE) -->
-    <div id="verification-page" class="min-h-screen animated-bg flex items-center justify-center p-4 md:p-10">
-        <div class="max-w-2xl w-full animate-in zoom-in-95 duration-700">
-            <!-- Header Badge -->
-            <div class="bg-white border-b-[10px] border-green-500 p-10 md:p-16 text-center shadow-[0_30px_100px_rgba(0,0,0,0.6)] mb-2 relative standard-rounded verified-pulse">
-                <div class="w-16 h-16 bg-green-500 flex items-center justify-center mx-auto mb-8 shadow-xl standard-rounded">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg>
+    <!-- VERIFICATION PAGE (SIMPLIFIED & PROFESSIONAL) -->
+    <div id="verification-page" class="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4 md:p-10 font-body">
+        <div class="max-w-xl w-full bg-white shadow-2xl standard-rounded overflow-hidden">
+            <!-- Green Status Header -->
+            <div class="bg-green-50 border-b border-green-100 p-8 md:p-10 text-center relative">
+                <div class="w-16 h-16 bg-green-500 flex items-center justify-center mx-auto mb-4 shadow-lg rounded-full verified-pulse">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
-                <h1 class="text-2xl md:text-4xl font-black tracking-widest uppercase text-slate-950 mb-3 leading-tight font-heading">Verified by DewaQR</h1>
-                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-green-600">Official Authenticity Certificate</p>
+                <h1 class="text-2xl md:text-3xl font-black uppercase text-green-700 tracking-tight font-heading">Verified Identity</h1>
+                <p class="text-xs font-semibold text-green-600/80 uppercase tracking-widest mt-1">Official Authentication Certificate</p>
             </div>
 
-            <!-- Content Card -->
-            <div class="bg-white p-10 md:p-16 shadow-2xl space-y-12 standard-rounded text-slate-950">
-                <div class="flex flex-col md:flex-row justify-between border-b-2 border-slate-100 pb-10 gap-8">
-                    <div class="flex-1">
-                        <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mb-2 text-left">Registered Subject Name</p>
-                        <p id="v-name" class="font-black text-2xl md:text-3xl text-slate-900 tracking-tighter uppercase leading-none font-heading text-left">-</p>
-                    </div>
-                    <div class="md:text-right text-left">
-                        <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mb-2">Certificate ID</p>
-                        <p id="v-code" class="font-mono font-black text-slate-900 text-xs bg-slate-50 px-4 py-2 border border-slate-200 standard-rounded inline-block">-</p>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-12 font-heading">
-                    <div class="space-y-2 border-l-4 border-slate-900 pl-5 text-left">
-                        <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mb-1">Affiliated Organization</p>
-                        <p id="v-org" class="font-black text-slate-900 text-lg uppercase tracking-tight">-</p>
-                    </div>
-                    <div class="space-y-2 border-l-4 border-amber-500 pl-5 text-left">
-                        <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mb-1">Subject Designation</p>
-                        <p id="v-role" class="font-bold text-slate-600 text-base uppercase">-</p>
-                    </div>
-                </div>
-
+            <!-- Main Content Area -->
+            <div class="p-8 md:p-12 space-y-10 text-slate-900">
+                <!-- Info List -->
                 <div class="space-y-6">
-                    <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest text-center">Verified Signature Specimen</p>
-                    <div class="bg-slate-50 border border-slate-100 p-8 flex items-center justify-center min-h-[160px] shadow-inner standard-rounded">
-                        <!-- Improved visibility for signature -->
-                        <img id="v-sig-img" src="" alt="Signature" class="max-h-32 w-auto contrast-[1.8] grayscale hover:grayscale-0 transition-all duration-700">
+                    <div class="flex items-start gap-5">
+                        <div class="w-10 h-10 bg-slate-100 flex items-center justify-center rounded-lg text-slate-500 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Full Name</p>
+                            <p id="v-name" class="font-bold text-lg md:text-xl uppercase tracking-tight text-slate-800">-</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-5">
+                        <div class="w-10 h-10 bg-slate-100 flex items-center justify-center rounded-lg text-slate-500 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Entity / Organization</p>
+                            <p id="v-org" class="font-bold text-base md:text-lg uppercase tracking-tight text-slate-800">-</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-5">
+                        <div class="w-10 h-10 bg-slate-100 flex items-center justify-center rounded-lg text-slate-500 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m12 14 4-4 4 4-4 4-4-4Z"/><path d="M3.34 7a10 10 0 1 1 17.32 0"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Designation</p>
+                            <p id="v-role" class="font-bold text-base uppercase tracking-tight text-slate-600">-</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-5">
+                        <div class="w-10 h-10 bg-slate-100 flex items-center justify-center rounded-lg text-slate-500 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Verification Date</p>
+                            <p id="v-date" class="font-bold text-sm uppercase text-slate-800">-</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="pt-10 border-t-2 border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
-                    <div>
-                        <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mb-2 text-left md:text-left">Issuance Date</p>
-                        <p id="v-date" class="text-xs text-slate-950 font-black uppercase text-left">-</p>
-                    </div>
-                    <div class="flex flex-col items-center md:items-end">
-                        <div class="text-slate-200 font-black italic text-5xl tracking-tighter select-none font-heading uppercase leading-none">DEWAQR</div>
-                        <p class="text-[8px] text-slate-400 font-bold uppercase tracking-widest text-center mt-2 tracking-[0.3em]">Official Trusted Provider</p>
+                <!-- Signature Specimen (FULL VISIBLE) -->
+                <div class="pt-6 border-t border-slate-100">
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4 text-center">Certified Signature Specimen</p>
+                    <div class="bg-slate-50 border border-slate-100 p-8 flex items-center justify-center min-h-[160px] standard-rounded">
+                        <!-- High visibility for signature -->
+                        <img id="v-sig-img" src="" alt="Signature" class="max-w-full h-auto max-h-40 contrast-[2] grayscale hover:grayscale-0 transition-all duration-500">
                     </div>
                 </div>
-                
-                <div class="bg-slate-950 text-white p-8 standard-rounded">
-                    <p class="text-center text-[9px] font-medium leading-relaxed italic opacity-80">
-                        "Authentication Statement: The identity information displayed above has been validated using the DewaQR visual verification system. This record is authentic based on the specimen registered by the authorized subject."
-                    </p>
+
+                <!-- Footer Certificate -->
+                <div class="pt-8 border-t border-slate-100 flex justify-between items-center opacity-40">
+                    <p id="v-code" class="font-mono text-[10px] font-bold">-</p>
+                    <div class="text-slate-900 font-black italic text-4xl tracking-tighter font-heading leading-none">DEWAQR</div>
                 </div>
             </div>
-
-            <div class="text-center mt-12">
-                <button onclick="buttonBack()" class="bg-white text-slate-950 px-12 py-5 font-black text-[11px] uppercase tracking-[0.3em] shadow-2xl hover:bg-amber-500 transition-all active:scale-95 standard-rounded">
-                    ← Back to Dashboard
+            
+            <div class="bg-slate-900 p-6 text-center">
+                <button onclick="buttonBack()" class="w-full text-white font-black text-xs uppercase tracking-widest py-3 standard-rounded border border-white/10 hover:bg-amber-500 hover:text-slate-950 transition-all">
+                    Return to Dashboard
                 </button>
             </div>
         </div>
+        <p class="mt-8 text-[9px] text-slate-500 font-bold uppercase tracking-[0.4em] opacity-50">Verified Security Protocol • DewaQR</p>
     </div>
 
     <script>
@@ -391,7 +402,7 @@
             }
         }
 
-        // Bitmap resolution increased to 60x30 for better visual quality in certificate
+        // Bitmap resolution set to 60x30 for optimal QR density and clarity
         async function signatureToBitmap(src, w, h) {
             return new Promise((resolve) => {
                 const img = new Image();
@@ -435,7 +446,7 @@
             const r = document.getElementById('sig-role').value || "OWNER";
             if (!uploadedSigData) return alertCustom('Please upload a signature specimen first!');
             
-            // Using 60x30 resolution for better clarity
+            // 60x30 resolution ensures visible detail on the verification card
             const hexBitmap = await signatureToBitmap(uploadedSigData, 60, 30);
             const data = { t:'s', n, o, r, c:Math.random().toString(36).substr(2,2).toUpperCase(), d:new Date().toLocaleDateString('en-US'), s:hexBitmap };
             const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(data))));
@@ -484,7 +495,7 @@
 
         function downloadFinalQR() {
             const link = document.createElement('a');
-            link.download = `DEWAQR_CERTIFICATE_${Date.now()}.png`;
+            link.download = `DEWAQR_ID_${Date.now()}.png`;
             link.href = document.getElementById('final-qr-canvas').toDataURL('image/png');
             link.click();
         }
@@ -495,7 +506,7 @@
                 try {
                     const d = JSON.parse(decodeURIComponent(escape(atob(p))));
                     if (d.t === 's') {
-                        document.getElementById('main-nav').style.display = 'none'; // Ensure no overlap
+                        document.getElementById('main-nav').style.display = 'none';
                         document.getElementById('main-app').style.display = 'none';
                         document.getElementById('verification-page').style.display = 'flex';
                         document.getElementById('v-name').textContent = d.n;
@@ -503,11 +514,11 @@
                         document.getElementById('v-role').textContent = d.r;
                         document.getElementById('v-code').textContent = '#' + d.c;
                         document.getElementById('v-date').textContent = d.d;
-                        // Display bitmap with 60x30 resolution scaled up
+                        // Display bitmap with 60x30 resolution
                         document.getElementById('v-sig-img').src = bitmapToImage(d.s, 60, 30);
-                        document.title = "Authenticated: " + d.n;
+                        document.title = "Verified Identity: " + d.n;
                     }
-                } catch(e) { console.error("Identity verification checksum error", e); }
+                } catch(e) { console.error("Identity validation failed", e); }
             }
         }
 
