@@ -11,6 +11,7 @@
             --bg-deep: #020617;
             --bg-card: #0f172a;
             --accent: #fbbf24;
+            /* Menggunakan System-UI agar tampilan lebih bersih dan native */
             --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
         
@@ -58,7 +59,7 @@
 
         #verification-page { display: none; }
 
-        /* Input & Placeholder Regular (Tidak Bold) */
+        /* Input & Placeholder Regular */
         input, textarea, select { 
             font-size: 16px !important; 
             border-radius: 10px !important; 
@@ -82,9 +83,9 @@
         /* Animasi Badge Modern */
         .badge-anim-container {
             position: relative;
-            width: 90px;
-            height: 90px;
-            margin: 0 auto 20px;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 16px;
         }
         .badge-ring {
             position: absolute;
@@ -97,7 +98,7 @@
         
         .verified-core {
             position: absolute;
-            top: 10px; left: 10px; right: 10px; bottom: 10px;
+            top: 8px; left: 8px; right: 8px; bottom: 8px;
             background: #22c55e;
             border-radius: 50%;
             display: flex;
@@ -111,22 +112,32 @@
             70% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
+
+        /* Staggered Animations */
+        .stagger-1 { animation: fadeInSlide 0.5s ease forwards; animation-delay: 0.1s; opacity: 0; }
+        .stagger-2 { animation: fadeInSlide 0.5s ease forwards; animation-delay: 0.2s; opacity: 0; }
+        .stagger-3 { animation: fadeInSlide 0.5s ease forwards; animation-delay: 0.3s; opacity: 0; }
+
+        @keyframes fadeInSlide {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden text-balance">
 
     <!-- NAVIGASI UTAMA -->
     <nav id="main-nav" class="fixed top-0 w-full z-50 glass-panel border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
             <div class="flex items-center gap-3 cursor-pointer" onclick="window.location.href=window.location.origin+window.location.pathname">
                 <div class="w-9 h-9 bg-amber-500 flex items-center justify-center font-black text-slate-950 text-xl standard-rounded shadow-[0_0_15px_rgba(251,191,36,0.6)]">D</div>
-                <span class="text-xl md:text-2xl font-extrabold tracking-tighter text-white uppercase">DEWA<span class="text-amber-500">QR</span></span>
+                <span class="text-xl md:text-2xl font-bold tracking-tighter text-white uppercase text-nowrap">DEWA<span class="text-amber-500">QR</span></span>
             </div>
             <div class="hidden md:flex items-center gap-8 text-[10px] font-bold text-slate-400 uppercase tracking-[0.25em]">
                 <a href="#features" class="hover:text-amber-400 transition-all">Keunggulan</a>
                 <a href="#generator" class="hover:text-amber-400 transition-all">Generator</a>
             </div>
-            <a href="#generator" class="bg-white text-slate-950 px-6 py-2 text-[11px] font-black uppercase tracking-widest hover:bg-amber-500 transition-all shadow-lg standard-rounded text-nowrap">Mulai Sekarang</a>
+            <a href="#generator" class="bg-white text-slate-950 px-6 py-2 text-[11px] font-bold uppercase tracking-widest hover:bg-amber-500 transition-all shadow-lg standard-rounded text-nowrap">Mulai</a>
         </div>
     </nav>
 
@@ -136,15 +147,15 @@
             <div class="max-w-5xl mx-auto relative z-10">
                 <div class="inline-flex items-center gap-3 px-6 py-2 border border-white/10 mb-10 bg-white/5 standard-rounded shadow-2xl">
                     <span class="w-1.5 h-1.5 bg-amber-500 rounded-full animate-ping"></span>
-                    <span class="text-[9px] md:text-[10px] font-bold tracking-[0.4em] uppercase text-amber-200 text-nowrap">Protokol Keamanan Digital Resmi</span>
+                    <span class="text-[9px] md:text-[10px] font-bold tracking-[0.4em] uppercase text-amber-200">Protokol Keamanan Digital Resmi</span>
                 </div>
                 
-                <h1 class="text-3xl sm:text-5xl md:text-7xl font-extrabold tracking-tighter mb-10 leading-[1.1] text-white px-4 uppercase text-balance">
+                <h1 class="text-3xl sm:text-5xl md:text-7xl font-extrabold tracking-tighter mb-10 leading-[1.1] text-white px-4 uppercase">
                     Verifikasi Identitas <br class="hidden md:block"> 
                     <span class="text-amber-500">Digital Profesional</span>
                 </h1>
                 
-                <p class="text-sm md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed mb-16 font-light px-6 opacity-90 text-balance">
+                <p class="text-sm md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed mb-16 font-light px-6 opacity-90 text-center">
                     DewaQR menghadirkan ekosistem modern untuk otentikasi identitas digital secara instan. Hasilkan kredensial aman yang dapat diverifikasi secara global melalui teknologi QR terkini.
                 </p>
                 
@@ -156,39 +167,12 @@
             </div>
         </section>
 
-        <!-- KEUNGGULAN (UMUM) -->
-        <section id="features" class="py-24 px-6 relative z-20">
-            <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
-                <div class="glass-panel p-10 md:p-14 shadow-2xl standard-rounded border border-white/5 transition-all hover:border-accent/30 text-center text-balance">
-                    <div class="w-12 h-12 bg-white/5 flex items-center justify-center text-amber-500 mb-8 standard-rounded mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-white uppercase tracking-tight">Privasi Aman</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed font-medium">Seluruh data identitas Anda diproses dengan standar keamanan tinggi untuk menjaga kerahasiaan informasi personal.</p>
-                </div>
-                <div class="glass-panel p-10 md:p-14 shadow-2xl standard-rounded border border-white/5 transition-all hover:border-accent/30 text-center text-balance">
-                    <div class="w-12 h-12 bg-white/5 flex items-center justify-center text-amber-500 mb-8 standard-rounded mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-white uppercase tracking-tight">Verifikasi Instan</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed font-medium">Lakukan validasi keaslian tanda tangan dan profil secara real-time hanya dengan satu pindaian kamera ponsel.</p>
-                </div>
-                <div class="glass-panel p-10 md:p-14 shadow-2xl standard-rounded border border-white/5 transition-all hover:border-accent/30 text-center text-balance">
-                    <div class="w-12 h-12 bg-white/5 flex items-center justify-center text-amber-500 mb-8 standard-rounded mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-white uppercase tracking-tight">Mudah Digunakan</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed font-medium">Antarmuka yang bersih dan modern memberikan kemudahan bagi siapa saja untuk membuat modul identitas digital.</p>
-                </div>
-            </div>
-        </section>
-
         <!-- PANEL GENERATOR -->
         <section id="generator" class="py-24 px-6 relative bg-slate-950/30">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16 px-4">
-                    <h2 class="text-3xl md:text-5xl font-black text-white mb-6 uppercase tracking-tighter text-nowrap text-balance font-heading">Pusat Konfigurasi Identitas</h2>
-                    <p class="text-slate-400 font-medium max-w-2xl mx-auto opacity-80">Lengkapi formulir di bawah ini untuk menghasilkan sertifikat identitas QR resmi Anda.</p>
+            <div class="max-w-7xl mx-auto text-center">
+                <div class="mb-16 px-4">
+                    <h2 class="text-3xl md:text-5xl font-black text-white mb-6 uppercase tracking-tighter text-nowrap font-heading">Pusat Konfigurasi Identitas</h2>
+                    <p class="text-slate-400 font-medium max-w-2xl mx-auto opacity-80 text-center">Lengkapi formulir di bawah ini untuk menghasilkan sertifikat identitas QR resmi Anda.</p>
                 </div>
 
                 <div class="flex overflow-x-auto custom-scrollbar gap-2 mb-12 pb-6 justify-start md:justify-center px-4">
@@ -200,8 +184,9 @@
                     <button onclick="switchTab('file')" id="tab-file" class="tab-btn whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 hover:text-white transition-all">Berkas</button>
                 </div>
 
-                <div class="grid lg:grid-cols-12 gap-10 items-start text-left text-balance">
-                    <div class="lg:col-span-7 glass-panel p-8 md:p-14 shadow-2xl standard-rounded">
+                <div class="grid lg:grid-cols-12 gap-10 items-start text-left">
+                    <div class="lg:col-span-7 glass-panel p-8 md:p-14 shadow-2xl standard-rounded text-balance">
+                        
                         <!-- Signature Form -->
                         <div id="form-signature" class="gen-form space-y-10 animate-in fade-in slide-in-from-left-4 duration-500">
                             <h4 class="text-xl md:text-2xl font-bold text-white uppercase tracking-tighter flex items-center gap-3 font-heading">
@@ -210,12 +195,12 @@
                             <div class="space-y-8">
                                 <div class="space-y-2">
                                     <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">Nama Lengkap Subjek *</label>
-                                    <input type="text" id="sig-name" placeholder="Masukkan nama (Contoh: Gusti Dewa Anggading)" class="w-full px-6 py-4 bg-slate-900/80 border border-white/10 focus:border-amber-500 outline-none text-white transition-all font-normal">
+                                    <input type="text" id="sig-name" placeholder="Masukkan nama pemilik" class="w-full px-6 py-4 bg-slate-900/80 border border-white/10 focus:border-amber-500 outline-none text-white transition-all font-normal">
                                 </div>
                                 <div class="grid md:grid-cols-2 gap-8">
                                     <div class="space-y-2">
                                         <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">Nama Perusahaan *</label>
-                                        <input type="text" id="sig-org" placeholder="Masukkan nama perusahaan" class="w-full px-6 py-4 bg-slate-900/80 border border-white/10 focus:border-amber-500 outline-none text-white transition-all font-normal">
+                                        <input type="text" id="sig-org" placeholder="Masukkan perusahaan" class="w-full px-6 py-4 bg-slate-900/80 border border-white/10 focus:border-amber-500 outline-none text-white transition-all font-normal">
                                     </div>
                                     <div class="space-y-2">
                                         <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">Jabatan Resmi</label>
@@ -223,10 +208,24 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="bg-white/5 p-8 border-2 border-dashed border-white/10 standard-rounded text-center group hover:border-amber-500/50 transition-all text-left">
-                                <label class="block text-[10px] font-bold text-amber-500 mb-4 uppercase tracking-widest text-left">Tautan URL Gambar Tanda Tangan *</label>
-                                <input type="url" id="sig-url-input" placeholder="https://hosting.com/tanda-tangan.png" class="w-full px-6 py-4 bg-slate-900/80 border border-white/10 focus:border-amber-500 outline-none text-white transition-all font-normal">
-                                <p class="text-[9px] text-slate-500 mt-4 italic">Berikan tautan URL langsung ke gambar tanda tangan yang sudah di-host secara online.</p>
+                            <div class="bg-white/5 p-8 border-2 border-dashed border-white/10 standard-rounded text-left group hover:border-amber-500/50 transition-all">
+                                <label class="block text-[10px] font-bold text-amber-500 mb-4 uppercase tracking-widest text-left">Tautan Gambar Tanda Tangan *</label>
+                                <input type="url" id="sig-url-input" placeholder="Tempel tautan berbagi Google Drive Anda di sini..." class="w-full px-6 py-4 bg-slate-900/80 border border-white/10 focus:border-amber-500 outline-none text-white transition-all font-normal">
+                                
+                                <!-- Tutorial Google Drive Revisi: Sangat Simpel -->
+                                <div class="mt-6 p-5 bg-blue-500/5 border border-blue-500/10 rounded-xl text-left">
+                                    <p class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                        Panduan Link Google Drive:
+                                    </p>
+                                    <ul class="text-[10px] text-slate-400 space-y-2 font-medium leading-relaxed">
+                                        <li>1. Unggah Gambar TTD ke Google Drive</li>
+                                        <li>2. Kemudian bagikan > ubah akses ke <b>"siapa saja memiliki link"</b></li>
+                                        <li>3. <b>Salin Tautan Berbagi</b> yang muncul di Google Drive</li>
+                                        <li>4. <b>Tempelkan langsung</b> di kolom Tautan Gambar Tanda Tangan di atas</li>
+                                        <li>5. Klik <b>Generate QR Terotentikasi</b></li>
+                                    </ul>
+                                </div>
                             </div>
                             <button onclick="generateSignatureQR()" class="w-full btn-premium text-slate-950 font-black py-5 shadow-2xl uppercase tracking-widest text-xs standard-rounded">
                                 Generate QR Terotentikasi
@@ -234,43 +233,55 @@
                         </div>
 
                         <!-- vCard Form -->
-                        <div id="form-vcard" class="gen-form hidden space-y-6 animate-in fade-in duration-300">
-                            <h4 class="text-2xl font-bold text-white uppercase tracking-tighter">vCard Digital</h4>
+                        <div id="form-vcard" class="gen-form hidden space-y-6 animate-in fade-in duration-300 text-left">
+                            <h4 class="text-2xl font-bold text-white uppercase tracking-tighter font-heading">vCard Digital</h4>
                             <div class="grid grid-cols-2 gap-4">
                                 <input type="text" id="vc-fn" placeholder="Nama Depan" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none focus:border-amber-500 font-normal">
                                 <input type="text" id="vc-ln" placeholder="Nama Belakang" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none focus:border-amber-500 font-normal">
                             </div>
-                            <input type="tel" id="vc-tel" placeholder="Nomor WhatsApp" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none focus:border-amber-500 font-normal">
+                            <input type="tel" id="vc-tel" placeholder="Nomor WhatsApp (Contoh: 62812...)" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none focus:border-amber-500 font-normal">
                             <button onclick="generateBasicQR('vcard')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate vCard</button>
                         </div>
 
-                        <!-- URL Form -->
-                        <div id="form-url" class="gen-form hidden space-y-4 animate-in fade-in duration-300">
-                            <h4 class="text-2xl font-bold text-white uppercase font-heading">Redirect Tautan</h4>
-                            <input type="url" id="url-input" placeholder="https://tautan-tujuan.com" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-normal">
+                        <!-- URL Form (Fix Bug) -->
+                        <div id="form-url" class="gen-form hidden space-y-6 animate-in fade-in duration-300 text-left">
+                            <h4 class="text-2xl font-bold text-white uppercase tracking-tighter font-heading">Tautan Redirect</h4>
+                            <div class="space-y-4">
+                                <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">URL Tujuan *</label>
+                                <input type="url" id="url-input" placeholder="https://domain-anda.com" class="w-full px-6 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-normal">
+                            </div>
                             <button onclick="generateBasicQR('url')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate Tautan</button>
                         </div>
 
-                        <!-- Lokasi Form -->
-                        <div id="form-maps" class="gen-form hidden space-y-4 animate-in fade-in duration-300">
-                            <h4 class="text-2xl font-bold text-white uppercase font-heading">Lokasi Maps</h4>
-                            <input type="url" id="map-url" placeholder="Paste link Google Maps" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-normal">
+                        <!-- Lokasi Form (Fix Bug) -->
+                        <div id="form-maps" class="gen-form hidden space-y-6 animate-in fade-in duration-300 text-left">
+                            <h4 class="text-2xl font-bold text-white uppercase tracking-tighter font-heading">Lokasi Maps</h4>
+                            <div class="space-y-4">
+                                <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">Tautan Berbagi Google Maps *</label>
+                                <input type="url" id="map-url" placeholder="Salin link bagikan dari Google Maps" class="w-full px-6 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-normal">
+                            </div>
                             <button onclick="generateBasicQR('maps')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate Lokasi</button>
                         </div>
 
-                        <!-- WhatsApp Form -->
-                        <div id="form-wa" class="gen-form hidden space-y-4 animate-in fade-in duration-300">
-                            <h4 class="text-2xl font-bold text-white uppercase font-heading">WhatsApp Direct</h4>
-                            <input type="tel" id="wa-num" placeholder="628..." class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-normal">
-                            <textarea id="wa-msg" rows="2" placeholder="Tulis pesan otomatis" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-normal"></textarea>
-                            <button onclick="generateBasicQR('wa')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate WA Link</button>
+                        <!-- WhatsApp Form (Fix Bug) -->
+                        <div id="form-wa" class="gen-form hidden space-y-6 animate-in fade-in duration-300 text-left">
+                            <h4 class="text-2xl font-bold text-white uppercase tracking-tighter font-heading">WhatsApp Direct</h4>
+                            <div class="space-y-4">
+                                <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">Nomor Telepon & Pesan *</label>
+                                <input type="tel" id="wa-num" placeholder="628..." class="w-full px-6 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-normal mb-2">
+                                <textarea id="wa-msg" rows="3" placeholder="Tulis pesan otomatis di sini..." class="w-full px-6 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-normal"></textarea>
+                            </div>
+                            <button onclick="generateBasicQR('wa')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate Link WA</button>
                         </div>
 
-                        <!-- Berkas Form -->
-                        <div id="form-file" class="gen-form hidden space-y-4 animate-in fade-in duration-300">
-                            <h4 class="text-2xl font-bold text-white uppercase font-heading">Berkas Cloud</h4>
-                            <input type="url" id="file-url" placeholder="Link PDF/Gambar di Cloud" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-normal">
-                            <button onclick="generateBasicQR('file')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate Berkas Link</button>
+                        <!-- Berkas Form (Fix Bug) -->
+                        <div id="form-file" class="gen-form hidden space-y-6 animate-in fade-in duration-300 text-left">
+                            <h4 class="text-2xl font-bold text-white uppercase tracking-tighter font-heading">Berkas Cloud</h4>
+                            <div class="space-y-4">
+                                <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">URL Berkas (PDF/Gambar) *</label>
+                                <input type="url" id="file-url" placeholder="Link akses langsung ke berkas" class="w-full px-6 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-normal">
+                            </div>
+                            <button onclick="generateBasicQR('file')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate Link Berkas</button>
                         </div>
                     </div>
 
@@ -308,18 +319,18 @@
                         <div class="w-10 h-10 bg-amber-500 flex items-center justify-center font-black text-slate-950 text-2xl standard-rounded shadow-[0_0_15px_#fbbf24]">D</div>
                         <span class="text-2xl font-extrabold tracking-tighter uppercase text-white font-heading">DEWA<span class="text-amber-500">QR</span></span>
                     </div>
-                    <p class="text-slate-500 text-sm leading-relaxed font-medium text-balance">
+                    <p class="text-slate-500 text-sm leading-relaxed font-medium">
                         Solusi identitas digital aman untuk otentikasi visual secara instan. Menghadirkan kredibilitas dan keamanan dalam satu pindaian.
                     </p>
                 </div>
                 <div class="text-center md:text-right">
-                    <p class="text-slate-400 text-sm font-extrabold uppercase tracking-widest opacity-80 font-heading text-nowrap">© 2026 DEWAQR — Copyright by Dewa</p>
+                    <p class="text-slate-400 text-sm font-extrabold uppercase tracking-widest opacity-80 font-heading text-nowrap text-center">© 2026 DEWAQR — Copyright by Dewa</p>
                 </div>
             </div>
         </footer>
     </div>
 
-    <!-- HALAMAN VERIFIKASI (MODERN DARK BLUE REDESIGN) -->
+    <!-- HALAMAN VERIFIKASI (NATIVE DARK BLUE REDESIGN) -->
     <div id="verification-page" class="min-h-screen animated-bg flex flex-col items-center justify-center p-4 md:p-12 overflow-y-auto">
         <!-- Kartu Utama (Hanya 1 Border) -->
         <div class="max-w-xl w-full glass-panel standard-rounded overflow-hidden animate-in zoom-in-95 duration-500 border border-white/10 shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
@@ -332,63 +343,58 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
                     </div>
                 </div>
-                <h1 class="text-2xl md:text-4xl font-extrabold text-white tracking-tight leading-tight uppercase font-heading text-balance">Otentikasi Berhasil</h1>
+                <h1 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-tight uppercase font-heading text-balance">Otentikasi Berhasil</h1>
                 <p class="text-[11px] font-bold text-green-400 uppercase tracking-[0.4em] mt-3 drop-shadow-lg">Sertifikasi DewaQR Resmi</p>
             </div>
 
-            <!-- Konten Utama Kredensial -->
+            <!-- Konten Minimalis (Informasi Pemilik Tetap Ada) -->
             <div class="p-8 md:p-14 space-y-12 text-slate-200">
                 
                 <!-- Deklarasi Keaslian -->
-                <div class="bg-white/5 p-6 md:p-8 standard-rounded border border-white/10 shadow-inner">
-                    <p class="text-[11px] md:text-[12px] leading-relaxed text-slate-400 font-medium italic text-center text-balance">
-                        "Catatan digital ini dikonfirmasi sebagai validasi resmi atas identitas subjek. Seluruh metadata dijamin melalui protokol enkripsi DewaQR yang aman."
+                <div class="bg-white/5 p-6 md:p-8 standard-rounded border border-white/10 shadow-inner text-center">
+                    <p class="text-[11px] md:text-[12px] leading-relaxed text-slate-400 font-medium italic text-balance">
+                        "Status Terverifikasi: Protokol keamanan DewaQR mengonfirmasi bahwa data yang terkandung di dalam tautan tanda tangan ini bersifat sah dan terotentikasi."
                     </p>
                 </div>
 
-                <!-- Bagian Informasi Pemilik Tanda Tangan -->
-                <div class="space-y-10">
-                    <div class="flex items-center gap-4 mb-4">
-                        <h2 class="text-xs font-black uppercase tracking-[0.3em] text-slate-500">Informasi Pemilik Tanda Tangan</h2>
-                        <div class="h-px bg-white/5 flex-1"></div>
-                    </div>
-
-                    <!-- Nama Lengkap (Tema Biru) -->
-                    <div class="flex items-center gap-6 animate-in slide-in-from-left-4 fill-mode-both stagger-1">
-                        <div class="w-14 h-14 bg-blue-500/20 flex items-center justify-center rounded-2xl text-blue-400 shrink-0 border border-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+                <!-- Informasi Terstruktur -->
+                <div class="space-y-8">
+                    <!-- Nama Pemilik (Tema Biru) -->
+                    <div class="flex items-center gap-6 stagger-1 text-left">
+                        <div class="w-14 h-14 bg-blue-500/20 flex items-center justify-center rounded-2xl text-blue-400 shrink-0 border border-blue-500/30">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                         </div>
                         <div class="flex-1 min-w-0">
-                            <p class="text-[11px] font-normal text-slate-500 uppercase tracking-[0.2em] mb-1">Nama Lengkap</p>
+                            <p class="text-[11px] font-normal text-slate-500 uppercase tracking-[0.2em] mb-1">Nama Pemilik QR Code</p>
                             <p id="v-name" class="font-semibold text-xl md:text-2xl tracking-tight text-white leading-tight truncate font-heading">-</p>
                         </div>
                     </div>
 
                     <!-- Jabatan (Tema Ungu) -->
-                    <div class="flex items-center gap-6 animate-in slide-in-from-left-4 fill-mode-both stagger-2">
-                        <div class="w-14 h-14 bg-purple-500/20 flex items-center justify-center rounded-2xl text-purple-400 shrink-0 border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.2)]">
+                    <div class="flex items-center gap-6 stagger-2 text-left">
+                        <div class="w-14 h-14 bg-purple-500/20 flex items-center justify-center rounded-2xl text-purple-400 shrink-0 border border-purple-500/30 text-left">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
                         </div>
-                        <div class="flex-1 min-w-0">
+                        <div class="flex-1 min-w-0 text-balance text-left">
                             <p class="text-[11px] font-normal text-slate-500 uppercase tracking-[0.2em] mb-1">Jabatan</p>
                             <p id="v-role" class="font-semibold text-lg md:text-xl text-white tracking-tight leading-tight truncate font-heading">-</p>
                         </div>
                     </div>
 
-                    <!-- Organisasi/Perusahaan (Tema Oranye) -->
-                    <div class="flex items-center gap-6 animate-in slide-in-from-left-4 fill-mode-both stagger-3">
-                        <div class="w-14 h-14 bg-amber-500/20 flex items-center justify-center rounded-2xl text-amber-400 shrink-0 border border-amber-500/30 shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+                    <!-- Nama Perusahaan (Tema Oranye) -->
+                    <div class="flex items-center gap-6 stagger-3 text-left">
+                        <div class="w-14 h-14 bg-amber-500/20 flex items-center justify-center rounded-2xl text-amber-400 shrink-0 border border-amber-500/30 text-left">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><path d="M9 3v18"/><path d="M15 3v18"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
                         </div>
-                        <div class="flex-1 min-w-0">
-                            <p class="text-[11px] font-normal text-slate-500 uppercase tracking-[0.2em] mb-1 text-nowrap">Organisasi / Perusahaan</p>
+                        <div class="flex-1 min-w-0 text-left">
+                            <p class="text-[11px] font-normal text-slate-500 uppercase tracking-[0.2em] mb-1">Nama Perusahaan</p>
                             <p id="v-org" class="font-semibold text-lg md:text-xl text-white tracking-tight leading-tight truncate font-heading">-</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bagian Spesimen Tanda Tangan -->
-                <div class="pt-10 border-t border-white/10">
+                <div class="pt-10 border-t border-white/10 text-center">
                     <div id="sig-placeholder" class="text-center py-4">
                          <a id="v-sig-link" href="#" target="_blank" class="group inline-flex items-center gap-3 px-12 py-5 bg-white text-slate-950 font-black text-xs uppercase tracking-[0.25em] standard-rounded hover:bg-amber-500 transition-all shadow-2xl active:scale-95">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="group-hover:scale-110 transition-transform"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -402,9 +408,9 @@
                             <img id="v-sig-img" src="" alt="Signature" class="max-w-full h-auto max-h-56 contrast-[1.4] grayscale hover:grayscale-0 transition-all duration-700 select-none">
                             
                             <!-- Kode Verifikasi terintegrasi -->
-                            <div class="mt-12 pt-6 border-t border-slate-100 w-full">
+                            <div class="mt-12 pt-6 border-t border-slate-100 w-full text-center">
                                 <p class="text-[9px] font-bold text-slate-400 uppercase tracking-[0.5em] mb-3">Kode Verifikasi Sertifikat</p>
-                                <div class="font-mono text-[14px] font-black text-slate-900 tracking-widest uppercase bg-slate-50 px-6 py-3 border border-slate-200 standard-rounded inline-flex items-center gap-3">
+                                <div class="font-mono text-[14px] font-black text-slate-900 tracking-widest uppercase bg-slate-50 px-6 py-3 border border-slate-200 standard-rounded inline-flex items-center gap-3 shadow-inner">
                                     <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
                                     <span id="v-code-label">#-----</span>
                                 </div>
@@ -417,9 +423,9 @@
                 <div class="pt-12 border-t border-white/5 flex flex-col items-center justify-center gap-4 opacity-40 select-none text-center">
                     <div class="flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-green-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-300">Enkripsi 256-bit Terverifikasi</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-300 text-nowrap">Enkripsi 256-bit Terverifikasi</p>
                     </div>
-                    <p class="font-mono text-[9px] font-bold tracking-widest uppercase text-slate-500">© 2026 PROKONTROL SECURITY STANDARD</p>
+                    <p class="font-mono text-[9px] font-bold tracking-widest uppercase text-slate-500 text-nowrap text-center">© 2026 PROKONTROL SECURITY STANDARD</p>
                 </div>
             </div>
             
@@ -450,13 +456,34 @@
             if (targetForm) { targetForm.classList.remove('hidden'); }
         }
 
+        // Fungsi Otomatis untuk Membersihkan link Google Drive
+        function cleanDriveUrl(url) {
+            if (url.includes('drive.google.com')) {
+                const parts = url.split('/');
+                let fileId = "";
+                // Mencari bagian yang merupakan ID file
+                const dIndex = parts.indexOf('d');
+                if (dIndex !== -1 && parts[dIndex + 1]) {
+                    fileId = parts[dIndex + 1].split('?')[0];
+                } else {
+                    const match = url.match(/id=([^&]+)/);
+                    if (match) fileId = match[1];
+                }
+                if (fileId) return `https://lh3.googleusercontent.com/d/${fileId}`;
+            }
+            return url;
+        }
+
         async function generateSignatureQR() {
             const n = document.getElementById('sig-name').value; 
             const o = document.getElementById('sig-org').value; 
             const r = document.getElementById('sig-role').value;
-            const sUrl = document.getElementById('sig-url-input').value;
+            let sUrl = document.getElementById('sig-url-input').value;
 
             if (!n || !o || !sUrl) return alertCustom('Mohon lengkapi Nama, Perusahaan, dan Tautan Tanda Tangan!');
+            
+            // Konversi otomatis link drive jika ada
+            sUrl = cleanDriveUrl(sUrl);
             
             const data = { 
                 t:'s', n, o, r, 
@@ -543,7 +570,7 @@
 
                         document.getElementById('v-sig-img').src = d.s;
                         document.getElementById('v-code-label').textContent = '#' + d.c;
-                        document.title = "Identitas Terverifikasi: " + d.n;
+                        document.title = "Otentikasi Berhasil | DewaQR";
                     }
                 } catch(e) { console.error("Integrity check failure", e); }
             }
