@@ -237,7 +237,7 @@
 
                         <!-- Lainnya -->
                         <div id="form-vcard" class="gen-form hidden space-y-6 animate-in fade-in duration-300">
-                            <h4 class="text-2xl font-bold text-white uppercase tracking-tighter">vCard Digital</h4>
+                            <h4 class="text-2xl font-bold text-white uppercase tracking-tighter text-left">vCard Digital</h4>
                             <div class="grid grid-cols-2 gap-4">
                                 <input type="text" id="vc-fn" placeholder="Nama Depan" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none focus:border-amber-500 font-normal uppercase">
                                 <input type="text" id="vc-ln" placeholder="Nama Belakang" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none focus:border-amber-500 font-normal uppercase">
@@ -245,23 +245,23 @@
                             <input type="tel" id="vc-tel" placeholder="Nomor WhatsApp" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none focus:border-amber-500 font-normal uppercase">
                             <button onclick="generateBasicQR('vcard')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate vCard</button>
                         </div>
-                        <div id="form-url" class="gen-form hidden space-y-4 animate-in fade-in duration-300">
+                        <div id="form-url" class="gen-form hidden space-y-4 animate-in fade-in duration-300 text-left">
                             <h4 class="text-2xl font-bold text-white uppercase">Redirect Tautan</h4>
                             <input type="url" id="url-input" placeholder="https://tautan-tujuan.com" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-normal">
                             <button onclick="generateBasicQR('url')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate Tautan</button>
                         </div>
-                        <div id="form-maps" class="gen-form hidden space-y-4 animate-in fade-in duration-300">
+                        <div id="form-maps" class="gen-form hidden space-y-4 animate-in fade-in duration-300 text-left">
                             <h4 class="text-2xl font-bold text-white uppercase">Lokasi Maps</h4>
                             <input type="url" id="map-url" placeholder="Salin link Google Maps" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-normal">
                             <button onclick="generateBasicQR('maps')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate Maps</button>
                         </div>
-                        <div id="form-wa" class="gen-form hidden space-y-4 animate-in fade-in duration-300">
+                        <div id="form-wa" class="gen-form hidden space-y-4 animate-in fade-in duration-300 text-left">
                             <h4 class="text-2xl font-bold text-white uppercase">WhatsApp Direct</h4>
                             <input type="tel" id="wa-num" placeholder="628..." class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-normal">
                             <textarea id="wa-msg" rows="2" placeholder="Tulis pesan otomatis" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-normal"></textarea>
                             <button onclick="generateBasicQR('wa')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate WA Link</button>
                         </div>
-                        <div id="form-file" class="gen-form hidden space-y-4 animate-in fade-in duration-300">
+                        <div id="form-file" class="gen-form hidden space-y-4 animate-in fade-in duration-300 text-left">
                             <h4 class="text-2xl font-bold text-white uppercase">Berkas Cloud</h4>
                             <input type="url" id="file-url" placeholder="Link PDF/Gambar di Cloud" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-normal">
                             <button onclick="generateBasicQR('file')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate Berkas Link</button>
@@ -269,9 +269,9 @@
                     </div>
 
                     <!-- AREA PREVIEW -->
-                    <div class="lg:col-span-5 sticky top-24">
-                        <div class="glass-panel p-10 md:p-14 shadow-2xl text-center flex flex-col items-center justify-center min-h-[450px] md:min-h-[550px] standard-rounded border border-white/5">
-                            <div id="preview-empty" class="space-y-8 opacity-20">
+                    <div class="lg:col-span-5 sticky top-24 text-center">
+                        <div class="glass-panel p-10 md:p-14 shadow-2xl flex flex-col items-center justify-center min-h-[450px] md:min-h-[550px] standard-rounded border border-white/5">
+                            <div id="preview-empty" class="space-y-8 opacity-20 text-center">
                                 <div class="w-24 h-24 border-4 border-amber-500 flex items-center justify-center mx-auto standard-rounded shadow-[0_0_20px_rgba(251,191,36,0.3)] text-amber-500">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><rect x="2" y="2" width="20" height="20" rx="0"/><rect x="5" y="5" width="5" height="5"/><rect x="14" y="5" width="5" height="5"/><rect x="5" y="14" width="5" height="5"/></svg>
                                 </div>
@@ -300,14 +300,14 @@
                 <div class="space-y-6 max-w-lg">
                     <div class="flex items-center justify-center md:justify-start gap-4">
                         <div class="w-10 h-10 bg-amber-500 flex items-center justify-center font-black text-slate-950 text-2xl standard-rounded shadow-[0_0_15px_#fbbf24]">D</div>
-                        <span class="text-2xl font-extrabold tracking-tighter uppercase text-white">DEWA<span class="text-amber-500">QR</span></span>
+                        <span class="text-2xl font-extrabold tracking-tighter uppercase text-white font-heading">DEWA<span class="text-amber-500">QR</span></span>
                     </div>
                     <p class="text-slate-500 text-sm leading-relaxed font-medium">
                         Solusi identitas digital aman untuk otentikasi visual secara instan. Menghadirkan kredibilitas dan keamanan dalam satu pindaian.
                     </p>
                 </div>
                 <div class="text-center md:text-right">
-                    <p class="text-slate-400 text-sm font-extrabold uppercase tracking-widest opacity-80">© 2026 DEWAQR — Copyright by Dewa</p>
+                    <p class="text-slate-400 text-sm font-extrabold uppercase tracking-widest opacity-80 font-heading">© 2026 DEWAQR — Copyright by Dewa</p>
                 </div>
             </div>
         </footer>
@@ -325,7 +325,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg>
                     </div>
                 </div>
-                <h1 class="text-2xl md:text-4xl font-extrabold text-green-700 tracking-tight leading-tight uppercase">Identitas Terverifikasi</h1>
+                <h1 class="text-2xl md:text-4xl font-extrabold text-green-700 tracking-tight leading-tight uppercase font-heading">Identitas Terverifikasi</h1>
                 <p class="text-[11px] font-bold text-green-600/70 uppercase tracking-[0.4em] mt-2">DewaQR Official Protocol</p>
             </div>
 
@@ -334,29 +334,41 @@
                 <!-- Pernyataan Profesional -->
                 <div class="bg-slate-50/80 p-8 standard-rounded border border-slate-100">
                     <p class="text-[11.5px] leading-relaxed text-slate-600 font-medium italic text-center">
-                        "Pernyataan Otentikasi Kredensial: Catatan digital ini berfungsi sebagai validasi resmi atas identitas subjek. Metadata diterbitkan melalui protokol otentikasi kriptografi DewaQR."
+                        "Pernyataan Otentikasi Kredensial: Catatan digital ini berfungsi sebagai validasi resmi atas identitas pemilik QR. Metadata diterbitkan melalui protokol otentikasi kriptografi DewaQR."
                     </p>
                 </div>
 
-                <div class="space-y-10">
+                <div class="space-y-12">
+                    <!-- Nama Pemilik -->
                     <div class="flex items-start gap-6">
-                        <div class="w-12 h-12 bg-slate-100 flex items-center justify-center rounded-lg text-slate-500 shrink-0 shadow-sm">
+                        <div class="w-12 h-12 bg-slate-100 flex items-center justify-center rounded-lg text-slate-500 shrink-0 shadow-sm border border-slate-200">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                         </div>
-                        <div class="flex-1 overflow-hidden text-balance">
-                            <p class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Subjek Terdaftar</p>
-                            <p id="v-name" class="font-extrabold text-2xl md:text-3xl uppercase tracking-tighter text-slate-900 leading-none">-</p>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Nama Pemilik QR Code</p>
+                            <p id="v-name" class="font-extrabold text-2xl md:text-3xl uppercase tracking-tighter text-slate-900 leading-none font-heading text-balance">-</p>
                         </div>
                     </div>
 
+                    <!-- Perusahaan -->
                     <div class="flex items-start gap-6">
-                        <div class="w-12 h-12 bg-slate-100 flex items-center justify-center rounded-lg text-slate-500 shrink-0 shadow-sm">
+                        <div class="w-12 h-12 bg-slate-100 flex items-center justify-center rounded-lg text-slate-500 shrink-0 shadow-sm border border-slate-200">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         </div>
-                        <div class="flex-1 overflow-hidden text-balance">
-                            <p class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Entitas Afiliasi</p>
-                            <p id="v-org" class="font-bold text-xl md:text-2xl uppercase tracking-tight text-slate-800 leading-none">-</p>
-                            <p id="v-role" class="font-bold text-[11px] uppercase text-slate-500 mt-3 tracking-widest">-</p>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Nama Perusahaan</p>
+                            <p id="v-org" class="font-bold text-xl md:text-2xl uppercase tracking-tight text-slate-800 leading-none font-heading text-balance">-</p>
+                        </div>
+                    </div>
+
+                    <!-- Jabatan -->
+                    <div class="flex items-start gap-6">
+                        <div class="w-12 h-12 bg-slate-100 flex items-center justify-center rounded-lg text-slate-500 shrink-0 shadow-sm border border-slate-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Jabatan</p>
+                            <p id="v-role" class="font-bold text-lg md:text-xl uppercase text-slate-600 tracking-tight font-heading">-</p>
                         </div>
                     </div>
                 </div>
@@ -381,9 +393,18 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Footer Sertifikat Digital -->
+                <div class="pt-12 border-t border-slate-100 flex flex-col items-center justify-center gap-4 opacity-50 select-none">
+                    <div class="flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                        <p class="text-[10px] font-bold uppercase tracking-widest">Enkripsi SHA-256 Terverifikasi</p>
+                    </div>
+                    <p class="font-mono text-[9px] font-bold tracking-widest uppercase text-slate-400">© 2026 PROKONTROL SECURITY STANDARD</p>
+                </div>
             </div>
             
-            <div class="bg-slate-950 p-10 text-center">
+            <div class="bg-slate-900 p-10 text-center">
                 <button onclick="buttonBack()" class="w-full text-white font-black text-[11px] uppercase tracking-[0.3em] py-5 standard-rounded border border-white/10 hover:bg-amber-500 hover:text-slate-950 transition-all shadow-xl active:scale-95">
                     Kembali ke Dashboard
                 </button>
@@ -479,6 +500,11 @@
             link.download = `DEWAQR_AUTH_${Date.now()}.png`;
             link.href = document.getElementById('final-qr-canvas').toDataURL('image/png');
             link.click();
+        }
+
+        function revealSignature() {
+            document.getElementById('sig-placeholder').classList.add('hidden');
+            document.getElementById('sig-display').classList.remove('hidden');
         }
 
         function checkURL() {
