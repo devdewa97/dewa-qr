@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>DewaQR | Digital Identity Authentication & Visual Verification</title>
+    <title>DewaQR | Professional Identity Authentication</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
         h1, h2, h3, h4, .font-heading { font-family: var(--font-head); }
         .standard-rounded { border-radius: 10px !important; }
 
-        /* Animated Flowing Gradient Background */
+        /* Background Animasi Gradasi Premium */
         .animated-bg {
             background: linear-gradient(-45deg, #020617, #0f172a, #1e1b4b, #020617);
             background-size: 400% 400%;
@@ -39,14 +39,14 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Glassmorphism Effect */
+        /* Efek Panel Glassmorphism */
         .glass-panel {
             background: rgba(15, 23, 42, 0.6);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Premium Accent Button */
+        /* Tombol Aksen Premium */
         .btn-premium {
             background: linear-gradient(90deg, #fbbf24, #f59e0b, #fbbf24);
             background-size: 200% auto;
@@ -57,7 +57,7 @@
 
         #verification-page { display: none; }
 
-        /* Mobile Optimization */
+        /* Optimasi Input Mobile: Anti-Zoom */
         input, textarea, select { font-size: 16px !important; border-radius: 10px !important; }
 
         .tab-btn.active-tab {
@@ -80,7 +80,7 @@
 </head>
 <body class="overflow-x-hidden">
 
-    <!-- MAIN NAVIGATION -->
+    <!-- NAVIGASI UTAMA -->
     <nav id="main-nav" class="fixed top-0 w-full z-50 glass-panel border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
             <div class="flex items-center gap-3 cursor-pointer" onclick="window.location.href=window.location.origin+window.location.pathname">
@@ -88,10 +88,10 @@
                 <span class="text-xl md:text-2xl font-black tracking-tighter text-white font-heading uppercase">DEWA<span class="text-amber-500">QR</span></span>
             </div>
             <div class="hidden md:flex items-center gap-8 text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">
-                <a href="#features" class="hover:text-amber-400 transition-all">Benefits</a>
-                <a href="#generator" class="hover:text-amber-400 transition-all">Generator</a>
+                <a href="#features" class="hover:text-amber-400 transition-all text-nowrap">Benefits</a>
+                <a href="#generator" class="hover:text-amber-400 transition-all text-nowrap">Generator</a>
             </div>
-            <a href="#generator" class="bg-white text-slate-950 px-6 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-amber-500 transition-all shadow-lg standard-rounded">Create QR</a>
+            <a href="#generator" class="bg-white text-slate-950 px-6 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-amber-500 transition-all shadow-lg standard-rounded">Get Started</a>
         </div>
     </nav>
 
@@ -101,16 +101,16 @@
             <div class="max-w-5xl mx-auto relative z-10">
                 <div class="inline-flex items-center gap-3 px-6 py-2 border border-white/10 mb-8 bg-white/5 standard-rounded shadow-2xl">
                     <span class="w-1.5 h-1.5 bg-amber-500 rounded-full animate-ping"></span>
-                    <span class="text-[9px] md:text-[10px] font-bold tracking-[0.4em] uppercase text-amber-200">The Global Standard in Identity Authentication</span>
+                    <span class="text-[9px] md:text-[10px] font-bold tracking-[0.4em] uppercase text-amber-200">Global Digital Trust Protocol</span>
                 </div>
                 
-                <h1 class="text-3xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-[1.15] text-white font-heading px-4">
-                    PROFESSIONAL DIGITAL <br class="hidden md:block"> 
-                    <span class="text-amber-500 uppercase">Visual Identity Verification</span>
+                <h1 class="text-3xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-[1.15] text-white font-heading px-4 uppercase">
+                    PROFESSIONAL IDENTITY <br class="hidden md:block"> 
+                    <span class="text-amber-500">Visual Authentication</span>
                 </h1>
                 
                 <p class="text-sm md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed mb-12 font-light px-6">
-                    DewaQR offers a premium integrated infrastructure for visual identification and secure digital credentials. Deliver instantaneous authenticity and global trust through advanced QR technology.
+                    A premium digital ecosystem for visual authentication. Securely generate and verify identification credentials with instantaneous accessibility and professional precision.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -121,29 +121,29 @@
             </div>
         </section>
 
-        <!-- CORE BENEFITS -->
+        <!-- BENEFITS -->
         <section id="features" class="py-24 px-6 relative z-20">
             <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
-                <div class="glass-panel p-10 md:p-12 shadow-2xl standard-rounded transition-all border border-white/5">
+                <div class="glass-panel p-10 md:p-12 shadow-2xl standard-rounded border border-white/5">
                     <div class="w-12 h-12 bg-white/5 flex items-center justify-center text-amber-500 mb-8 standard-rounded mx-auto md:mx-0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
                     </div>
                     <h3 class="text-lg font-bold mb-4 text-white uppercase tracking-tight font-heading">Data Sovereignty</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Processing is executed exclusively on the client-side, ensuring your identification parameters remain under your absolute control.</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Processing is executed exclusively on the client-side, ensuring your identification parameters remain under your control.</p>
                 </div>
-                <div class="glass-panel p-10 md:p-12 shadow-2xl standard-rounded transition-all border border-white/5">
+                <div class="glass-panel p-10 md:p-12 shadow-2xl standard-rounded border border-white/5">
                     <div class="w-12 h-12 bg-white/5 flex items-center justify-center text-amber-500 mb-8 standard-rounded mx-auto md:mx-0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                     </div>
-                    <h3 class="text-lg font-bold mb-4 text-white uppercase tracking-tight font-heading">Instant Validation</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Authenticate digital signatures and official credentials in real-time through a sophisticated visual verification certificate.</p>
+                    <h3 class="text-lg font-bold mb-4 text-white uppercase tracking-tight font-heading">Instant Integrity</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Authenticate credentials in real-time through a sophisticated visual verification interface designed for clarity and trust.</p>
                 </div>
-                <div class="glass-panel p-10 md:p-12 shadow-2xl standard-rounded transition-all border border-white/5">
+                <div class="glass-panel p-10 md:p-12 shadow-2xl standard-rounded border border-white/5">
                     <div class="w-12 h-12 bg-white/5 flex items-center justify-center text-amber-500 mb-8 standard-rounded mx-auto md:mx-0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                     </div>
-                    <h3 class="text-lg font-bold mb-4 text-white uppercase tracking-tight font-heading">Professional Standards</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Leverage state-of-the-art digital identification solutions that enhance organizational efficiency and credential credibility.</p>
+                    <h3 class="text-lg font-bold mb-4 text-white uppercase tracking-tight font-heading">Modern Workflow</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Deploying cutting-edge digital identification solutions that enhance organizational efficiency and credential credibility.</p>
                 </div>
             </div>
         </section>
@@ -152,14 +152,14 @@
         <section id="generator" class="py-24 px-6 relative bg-slate-950/20">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16 px-4">
-                    <h2 class="text-3xl md:text-5xl font-black text-white mb-6 uppercase tracking-tighter font-heading">Identity Hub</h2>
+                    <h2 class="text-3xl md:text-5xl font-black text-white mb-6 uppercase tracking-tighter font-heading text-nowrap">Identity Hub</h2>
                     <p class="text-slate-400 font-medium max-w-2xl mx-auto">Select a specialized module to generate your authenticated QR credential certificate.</p>
                 </div>
 
                 <div class="flex overflow-x-auto custom-scrollbar gap-2 mb-12 pb-6 justify-start md:justify-center px-4">
                     <button onclick="switchTab('signature')" id="tab-signature" class="tab-btn active-tab whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 transition-all">Signature</button>
-                    <button onclick="switchTab('vcard')" id="tab-vcard" class="tab-btn whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 hover:text-white transition-all">vCard Profile</button>
-                    <button onclick="switchTab('url')" id="tab-url" class="tab-btn whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 hover:text-white transition-all">Web Link</button>
+                    <button onclick="switchTab('vcard')" id="tab-vcard" class="tab-btn whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 hover:text-white transition-all">vCard Profil</button>
+                    <button onclick="switchTab('url')" id="tab-url" class="tab-btn whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 hover:text-white transition-all">Link URL</button>
                     <button onclick="switchTab('maps')" id="tab-maps" class="tab-btn whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 hover:text-white transition-all">Location</button>
                     <button onclick="switchTab('wa')" id="tab-wa" class="tab-btn whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 hover:text-white transition-all">WhatsApp</button>
                     <button onclick="switchTab('file')" id="tab-file" class="tab-btn whitespace-nowrap px-8 py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 text-slate-400 hover:text-white transition-all">Cloud File</button>
@@ -180,7 +180,7 @@
                                 <div class="grid md:grid-cols-2 gap-6">
                                     <div>
                                         <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-2">Issuing Organization *</label>
-                                        <input type="text" id="sig-org" placeholder="PT DIGILABS KREASI NUSANTARA" class="w-full px-6 py-4 bg-slate-900/80 border border-white/10 focus:border-amber-500 outline-none text-white transition-all font-semibold uppercase">
+                                        <input type="text" id="sig-org" placeholder="PT DIGILABS KREASI NUSA" class="w-full px-6 py-4 bg-slate-900/80 border border-white/10 focus:border-amber-500 outline-none text-white transition-all font-semibold uppercase">
                                     </div>
                                     <div>
                                         <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-2">Official Designation</label>
@@ -189,7 +189,7 @@
                                 </div>
                             </div>
                             <div class="bg-white/5 p-6 border-2 border-dashed border-white/10 standard-rounded text-center">
-                                <label class="block text-[10px] font-bold text-amber-500 mb-4 uppercase tracking-widest text-center">Digital Signature Specimen</label>
+                                <label class="block text-[10px] font-bold text-amber-500 mb-4 uppercase tracking-widest">Upload Signature Specimen (HD Quality)</label>
                                 <input type="file" id="sig-img-upload" accept="image/*" class="w-full text-[10px] font-bold text-slate-500 cursor-pointer file:bg-amber-500 file:border-0 file:px-4 file:py-2 file:text-slate-950 file:rounded-md file:mr-4 file:font-black file:uppercase">
                             </div>
                             <button onclick="generateSignatureQR()" class="w-full btn-premium text-slate-950 font-black py-5 shadow-2xl uppercase tracking-widest text-xs standard-rounded">
@@ -197,25 +197,25 @@
                             </button>
                         </div>
 
-                        <!-- Generic Forms -->
+                        <!-- Extra Modules -->
                         <div id="form-vcard" class="gen-form hidden space-y-6 animate-in fade-in duration-300">
                             <h4 class="text-2xl font-black text-white uppercase tracking-tighter font-heading text-left">Digital vCard</h4>
                             <div class="grid grid-cols-2 gap-4">
                                 <input type="text" id="vc-fn" placeholder="First Name" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none focus:border-amber-500 font-semibold uppercase">
                                 <input type="text" id="vc-ln" placeholder="Last Name" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none focus:border-amber-500 font-semibold uppercase">
                             </div>
-                            <input type="tel" id="vc-tel" placeholder="Phone Number" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none focus:border-amber-500 font-semibold uppercase">
+                            <input type="tel" id="vc-tel" placeholder="Mobile Number" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none focus:border-amber-500 font-semibold uppercase">
                             <button onclick="generateBasicQR('vcard')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate vCard</button>
                         </div>
                         <div id="form-url" class="gen-form hidden space-y-4 animate-in fade-in duration-300 text-left">
                             <h4 class="text-2xl font-black text-white uppercase font-heading">Web Link Redirect</h4>
                             <input type="url" id="url-input" placeholder="https://corporate-domain.com" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-semibold">
-                            <button onclick="generateBasicQR('url')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate URL</button>
+                            <button onclick="generateBasicQR('url')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate URL Link</button>
                         </div>
                         <div id="form-maps" class="gen-form hidden space-y-4 animate-in fade-in duration-300 text-left">
-                            <h4 class="text-2xl font-black text-white uppercase font-heading">Location Point</h4>
+                            <h4 class="text-2xl font-black text-white uppercase font-heading">Location Marker</h4>
                             <input type="url" id="map-url" placeholder="Paste Google Maps URL here" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-semibold">
-                            <button onclick="generateBasicQR('maps')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate Maps</button>
+                            <button onclick="generateBasicQR('maps')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate Maps Link</button>
                         </div>
                         <div id="form-wa" class="gen-form hidden space-y-4 animate-in fade-in duration-300 text-left">
                             <h4 class="text-2xl font-black text-white uppercase font-heading">WhatsApp Direct</h4>
@@ -224,8 +224,8 @@
                             <button onclick="generateBasicQR('wa')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate WA Link</button>
                         </div>
                         <div id="form-file" class="gen-form hidden space-y-4 animate-in fade-in duration-300 text-left">
-                            <h4 class="text-2xl font-black text-white uppercase font-heading">Cloud File</h4>
-                            <input type="url" id="file-url" placeholder="Direct URL to PDF/Image" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-semibold">
+                            <h4 class="text-2xl font-black text-white uppercase font-heading">Cloud File Sharing</h4>
+                            <input type="url" id="file-url" placeholder="Direct URL to Cloud PDF/Image" class="w-full px-5 py-4 bg-slate-900/80 border border-white/10 text-white outline-none font-semibold">
                             <button onclick="generateBasicQR('file')" class="w-full btn-premium text-slate-950 font-black py-4 uppercase text-xs tracking-widest">Generate File Link</button>
                         </div>
 
@@ -243,7 +243,7 @@
                     <div class="lg:col-span-5 sticky top-24">
                         <div class="glass-panel p-10 md:p-14 shadow-2xl text-center flex flex-col items-center justify-center min-h-[450px] md:min-h-[550px] standard-rounded border border-white/5">
                             <div id="preview-empty" class="space-y-8 opacity-20">
-                                <div class="w-24 h-24 border-4 border-amber-500 flex items-center justify-center mx-auto standard-rounded shadow-[0_0_20px_rgba(251,191,36,0.3)]">
+                                <div class="w-24 h-24 border-4 border-amber-500 flex items-center justify-center mx-auto standard-rounded shadow-[0_0_20px_rgba(251,191,36,0.3)] text-amber-500">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><rect x="2" y="2" width="20" height="20" rx="0"/><rect x="5" y="5" width="5" height="5"/><rect x="14" y="5" width="5" height="5"/><rect x="5" y="14" width="5" height="5"/></svg>
                                 </div>
                                 <p class="font-black uppercase tracking-[0.5em] text-[10px] text-white">System Ready</p>
@@ -256,7 +256,7 @@
                                 </div>
                                 <button onclick="downloadFinalQR()" class="w-full bg-white text-slate-950 font-black py-4 md:py-5 shadow-2xl hover:bg-amber-500 transition-all flex items-center justify-center gap-4 active:scale-95 uppercase text-xs tracking-[0.2em] standard-rounded">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                                    Download Result
+                                    Download Module
                                 </button>
                             </div>
                         </div>
@@ -284,86 +284,74 @@
         </footer>
     </div>
 
-    <!-- VERIFICATION PAGE (SIMPLIFIED & PROFESSIONAL) -->
+    <!-- VERIFICATION PAGE (HD & MINIMALIST) -->
     <div id="verification-page" class="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4 md:p-10 font-body">
-        <div class="max-w-xl w-full bg-white shadow-2xl standard-rounded overflow-hidden">
-            <!-- Green Status Header -->
-            <div class="bg-green-50 border-b border-green-100 p-8 md:p-10 text-center relative">
+        <div class="max-w-xl w-full bg-white shadow-[0_30px_100px_rgba(0,0,0,0.15)] standard-rounded overflow-hidden animate-in zoom-in-95 duration-500">
+            <!-- Professional Header -->
+            <div class="bg-green-50 border-b border-green-100 p-8 md:p-12 text-center relative">
                 <div class="w-16 h-16 bg-green-500 flex items-center justify-center mx-auto mb-4 shadow-lg rounded-full verified-pulse">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
-                <h1 class="text-2xl md:text-3xl font-black uppercase text-green-700 tracking-tight font-heading">Verified Identity</h1>
-                <p class="text-xs font-semibold text-green-600/80 uppercase tracking-widest mt-1">Official Authentication Certificate</p>
+                <h1 class="text-2xl md:text-3xl font-black uppercase text-green-700 tracking-tight font-heading leading-tight">Verified Identity</h1>
+                <p class="text-xs font-bold text-green-600/70 uppercase tracking-[0.3em] mt-1">Authenticated by DewaQR Protocol</p>
             </div>
 
-            <!-- Main Content Area -->
-            <div class="p-8 md:p-12 space-y-10 text-slate-900">
-                <!-- Info List -->
-                <div class="space-y-6">
+            <!-- Credentials Content Area -->
+            <div class="p-8 md:p-12 space-y-10 text-slate-900 text-left">
+                <!-- Formal Authenticity Statement -->
+                <div class="bg-slate-50/80 p-6 standard-rounded border border-slate-100">
+                    <p class="text-[11px] leading-relaxed text-slate-600 font-medium italic text-center">
+                        "Credential Authenticity Statement: This digital record serves as a validated verification of the subject's identity and professional affiliation. The metadata contained herein has been encrypted and issued through the DewaQR cryptographic standard."
+                    </p>
+                </div>
+
+                <!-- Info Grid -->
+                <div class="grid gap-8">
                     <div class="flex items-start gap-5">
-                        <div class="w-10 h-10 bg-slate-100 flex items-center justify-center rounded-lg text-slate-500 shrink-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <div class="w-12 h-12 bg-slate-100 flex items-center justify-center rounded-lg text-slate-500 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                         </div>
                         <div>
-                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Full Name</p>
-                            <p id="v-name" class="font-bold text-lg md:text-xl uppercase tracking-tight text-slate-800">-</p>
+                            <p class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Registered Subject</p>
+                            <p id="v-name" class="font-black text-xl md:text-2xl uppercase tracking-tighter text-slate-800 leading-none font-heading text-left">-</p>
                         </div>
                     </div>
 
                     <div class="flex items-start gap-5">
-                        <div class="w-10 h-10 bg-slate-100 flex items-center justify-center rounded-lg text-slate-500 shrink-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <div class="w-12 h-12 bg-slate-100 flex items-center justify-center rounded-lg text-slate-500 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         </div>
                         <div>
-                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Entity / Organization</p>
-                            <p id="v-org" class="font-bold text-base md:text-lg uppercase tracking-tight text-slate-800">-</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-5">
-                        <div class="w-10 h-10 bg-slate-100 flex items-center justify-center rounded-lg text-slate-500 shrink-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m12 14 4-4 4 4-4 4-4-4Z"/><path d="M3.34 7a10 10 0 1 1 17.32 0"/></svg>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Designation</p>
-                            <p id="v-role" class="font-bold text-base uppercase tracking-tight text-slate-600">-</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-5">
-                        <div class="w-10 h-10 bg-slate-100 flex items-center justify-center rounded-lg text-slate-500 shrink-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Verification Date</p>
-                            <p id="v-date" class="font-bold text-sm uppercase text-slate-800">-</p>
+                            <p class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Affiliated Organization</p>
+                            <p id="v-org" class="font-bold text-lg md:text-xl uppercase tracking-tight text-slate-700 leading-none text-left">-</p>
+                            <p id="v-role" class="font-semibold text-xs uppercase text-slate-500 mt-2 tracking-wide text-left">-</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Signature Specimen (FULL VISIBLE) -->
-                <div class="pt-6 border-t border-slate-100">
-                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4 text-center">Certified Signature Specimen</p>
-                    <div class="bg-slate-50 border border-slate-100 p-8 flex items-center justify-center min-h-[160px] standard-rounded">
-                        <!-- High visibility for signature -->
-                        <img id="v-sig-img" src="" alt="Signature" class="max-w-full h-auto max-h-40 contrast-[2] grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- HD Signature Reconstruction Section -->
+                <div class="pt-8 border-t border-slate-100">
+                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-5 text-center">Validated Digital Specimen</p>
+                    <div class="bg-slate-50 border-2 border-slate-100 p-8 flex items-center justify-center min-h-[180px] standard-rounded shadow-inner">
+                        <!-- High visibility reconstruction area -->
+                        <img id="v-sig-img" src="" alt="Signature" class="max-w-full h-auto max-h-48 contrast-[1.8] grayscale hover:grayscale-0 transition-all duration-700 select-none">
                     </div>
                 </div>
 
-                <!-- Footer Certificate -->
-                <div class="pt-8 border-t border-slate-100 flex justify-between items-center opacity-40">
-                    <p id="v-code" class="font-mono text-[10px] font-bold">-</p>
-                    <div class="text-slate-900 font-black italic text-4xl tracking-tighter font-heading leading-none">DEWAQR</div>
+                <!-- Digital Footer Metadata -->
+                <div class="pt-8 border-t border-slate-100 flex justify-between items-center opacity-40 select-none">
+                    <p id="v-code" class="font-mono text-[10px] font-bold tracking-tighter uppercase">-</p>
+                    <div class="text-slate-950 font-black italic text-4xl tracking-tighter font-heading leading-none">DEWAQR</div>
                 </div>
             </div>
             
-            <div class="bg-slate-900 p-6 text-center">
-                <button onclick="buttonBack()" class="w-full text-white font-black text-xs uppercase tracking-widest py-3 standard-rounded border border-white/10 hover:bg-amber-500 hover:text-slate-950 transition-all">
+            <div class="bg-slate-950 p-8 text-center">
+                <button onclick="buttonBack()" class="w-full text-white font-black text-xs uppercase tracking-[0.2em] py-4 standard-rounded border border-white/10 hover:bg-amber-500 hover:text-slate-950 transition-all shadow-xl active:scale-95">
                     Return to Dashboard
                 </button>
             </div>
         </div>
-        <p class="mt-8 text-[9px] text-slate-500 font-bold uppercase tracking-[0.4em] opacity-50">Verified Security Protocol • DewaQR</p>
+        <p class="mt-8 text-[10px] text-slate-400 font-bold uppercase tracking-[0.5em] opacity-40">Identity Protocol Secured by DewaQR Group</p>
     </div>
 
     <script>
@@ -402,8 +390,8 @@
             }
         }
 
-        // Bitmap resolution set to 60x30 for optimal QR density and clarity
-        async function signatureToBitmap(src, w, h) {
+        // Bitmap resolution set to 110x55 (Balanced for HD quality and QR capacity limits)
+        async function signatureToHDBytemap(src, w, h) {
             return new Promise((resolve) => {
                 const img = new Image();
                 img.onload = () => {
@@ -414,7 +402,8 @@
                     const imageData = cx.getImageData(0, 0, w, h).data;
                     let bits = "";
                     for (let i = 0; i < imageData.length; i += 4) {
-                        bits += ((imageData[i] + imageData[i+1] + imageData[i+2])/3 < 180 ? "1" : "0");
+                        // High precision binarization
+                        bits += ((imageData[i] + imageData[i+1] + imageData[i+2])/3 < 185 ? "1" : "0");
                     }
                     let hex = "";
                     for (let i = 0; i < bits.length; i += 4) hex += parseInt(bits.substr(i, 4), 2).toString(16);
@@ -424,7 +413,7 @@
             });
         }
 
-        function bitmapToImage(hex, w, h) {
+        function hdBytemapToImage(hex, w, h) {
             let bits = "";
             for (let i = 0; i < hex.length; i++) bits += parseInt(hex[i], 16).toString(2).padStart(4, '0');
             const c = document.createElement('canvas'); c.width = w; c.height = h;
@@ -442,14 +431,21 @@
 
         async function generateSignatureQR() {
             const n = document.getElementById('sig-name').value || "GUSTI DEWA ANGGADING"; 
-            const o = document.getElementById('sig-org').value || "PT DIGILABS KREASI NUSANTARA"; 
+            const o = document.getElementById('sig-org').value || "PT DIGILABS KREASI NUSA"; 
             const r = document.getElementById('sig-role').value || "OWNER";
-            if (!uploadedSigData) return alertCustom('Please upload a signature specimen first!');
+            if (!uploadedSigData) return alertCustom('Please upload a signature specimen!');
             
-            // 60x30 resolution ensures visible detail on the verification card
-            const hexBitmap = await signatureToBitmap(uploadedSigData, 60, 30);
-            const data = { t:'s', n, o, r, c:Math.random().toString(36).substr(2,2).toUpperCase(), d:new Date().toLocaleDateString('en-US'), s:hexBitmap };
-            const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(data))));
+            // Reconstruct at 110x55 for optimal HD output without crashing qrcodejs
+            const hexHD = await signatureToHDBytemap(uploadedSigData, 110, 55);
+            
+            const data = { 
+                t:'s', n, o, r, 
+                c: Math.random().toString(36).substr(2,2).toUpperCase() + Date.now().toString().substr(-2),
+                s: hexHD 
+            };
+            
+            const jsonStr = JSON.stringify(data);
+            const encoded = btoa(unescape(encodeURIComponent(jsonStr)));
             
             const currentURL = window.location.href.split('?')[0];
             renderQR(`${currentURL}?v=${encoded}`);
@@ -468,34 +464,46 @@
         }
 
         function renderQR(text) {
-            document.getElementById('preview-empty').classList.add('hidden');
-            document.getElementById('preview-result').classList.remove('hidden');
             const qrTarget = document.getElementById('qrcode');
             qrTarget.innerHTML = "";
             
-            new QRCode(qrTarget, { text: text, width: 512, height: 512, correctLevel: QRCode.CorrectLevel.L });
+            try {
+                // CorrectLevel L (Low) handles max data capacity (up to ~2953 characters)
+                new QRCode(qrTarget, { 
+                    text: text, 
+                    width: 512, 
+                    height: 512, 
+                    correctLevel: QRCode.CorrectLevel.L 
+                });
 
-            setTimeout(() => {
-                const img = qrTarget.querySelector('img');
-                if (!img) return;
-                const c = document.getElementById('final-qr-canvas'); c.width = 512; c.height = 512;
-                const cx = c.getContext('2d'); cx.fillStyle = "white"; cx.fillRect(0,0,512,512);
-                cx.drawImage(img, 0, 0, 512, 512);
+                document.getElementById('preview-empty').classList.add('hidden');
+                document.getElementById('preview-result').classList.remove('hidden');
 
-                if (uploadedLogoData) {
-                    const l = new Image();
-                    l.onload = () => {
-                        const s = 100; cx.fillStyle = "white"; cx.fillRect(206, 206, 100, 100);
-                        cx.drawImage(l, 211, 211, 90, 90);
-                    };
-                    l.src = uploadedLogoData;
-                }
-            }, 400);
+                setTimeout(() => {
+                    const img = qrTarget.querySelector('img');
+                    if (!img) return;
+                    const c = document.getElementById('final-qr-canvas'); c.width = 512; c.height = 512;
+                    const cx = c.getContext('2d'); cx.fillStyle = "white"; cx.fillRect(0,0,512,512);
+                    cx.drawImage(img, 0, 0, 512, 512);
+
+                    if (uploadedLogoData) {
+                        const l = new Image();
+                        l.onload = () => {
+                            const s = 100; cx.fillStyle = "white"; cx.fillRect(206, 206, 100, 100);
+                            cx.drawImage(l, 211, 211, 90, 90);
+                        };
+                        l.src = uploadedLogoData;
+                    }
+                }, 400);
+            } catch (e) {
+                console.error("QR Generation failed", e);
+                alertCustom("Data is too large for the QR module. Please try again.");
+            }
         }
 
         function downloadFinalQR() {
             const link = document.createElement('a');
-            link.download = `DEWAQR_ID_${Date.now()}.png`;
+            link.download = `DEWAQR_AUTH_${Date.now()}.png`;
             link.href = document.getElementById('final-qr-canvas').toDataURL('image/png');
             link.click();
         }
@@ -506,19 +514,18 @@
                 try {
                     const d = JSON.parse(decodeURIComponent(escape(atob(p))));
                     if (d.t === 's') {
-                        document.getElementById('main-nav').style.display = 'none';
+                        document.getElementById('main-nav').style.display = 'none'; // Clear navigation for certificate view
                         document.getElementById('main-app').style.display = 'none';
                         document.getElementById('verification-page').style.display = 'flex';
                         document.getElementById('v-name').textContent = d.n;
                         document.getElementById('v-org').textContent = d.o;
                         document.getElementById('v-role').textContent = d.r;
                         document.getElementById('v-code').textContent = '#' + d.c;
-                        document.getElementById('v-date').textContent = d.d;
-                        // Display bitmap with 60x30 resolution
-                        document.getElementById('v-sig-img').src = bitmapToImage(d.s, 60, 30);
-                        document.title = "Verified Identity: " + d.n;
+                        // HD Reconstruction using 110x55 resolution
+                        document.getElementById('v-sig-img').src = hdBytemapToImage(d.s, 110, 55);
+                        document.title = "Verified Identity: " + d.n + " | DewaQR";
                     }
-                } catch(e) { console.error("Identity validation failed", e); }
+                } catch(e) { console.error("Identity checksum integrity failure", e); }
             }
         }
 
